@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="BuildingDefinition" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/capacity_spec.gd" id="1_0xlxp"]
+[ext_resource type="Script" path="res://scripts/data/port_spec.gd" id="2_vn0pk"]
+[ext_resource type="Script" path="res://scripts/data/building_definition.gd" id="3_g6rf0"]
+
+[sub_resource type="Resource" id="Resource_xirnk"]
+script = ExtResource("1_0xlxp")
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_ynmx2"]
+script = ExtResource("2_vn0pk")
+
+[resource]
+script = ExtResource("3_g6rf0")
+id = "base"
+display_name = "Field Base"
+footprint = 2
+model_id = "ref_control_room"
+upkeep = 2.0
+category = "BASE"
+icon_path = "res://assets/icons/base.png"
+description = "HQ — launches survey and site-prep units"
+minimap_color = Color(0.95, 0.85, 0.35, 1)
+buildable = false
+role = "base"
+ports = SubResource("Resource_ynmx2")
+capacity = SubResource("Resource_xirnk")

@@ -1,0 +1,24 @@
+# Godot import cache / editor state
+game/.godot/
+.godot/
+
+# runtime logs and captures
+*.out
+*.err
+selftest.*
+run.*
+cam_*.png
+game/shot.png
+shot.png
+
+# Blender backups
+*.blend1
+*.blend2
+
+# combined kit duplicates (per-asset GLBs are kept)
+assets/glb/oilfield_kit.glb
+game/assets/models/oilfield_kit.glb
+
+# nested third-party clone (installed skills live under .claude/skills)
+blender/blender-skills/
+tmp_weatherfx/

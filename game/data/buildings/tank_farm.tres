@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="BuildingDefinition" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/capacity_spec.gd" id="1_k2nvd"]
+[ext_resource type="Script" path="res://scripts/data/port_spec.gd" id="2_2sdlw"]
+[ext_resource type="Script" path="res://scripts/data/building_definition.gd" id="3_aawf5"]
+
+[sub_resource type="Resource" id="Resource_m3b1m"]
+script = ExtResource("1_k2nvd")
+volume = 2400.0
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_3njsr"]
+script = ExtResource("2_2sdlw")
+in_sides = 15
+out_sides = 15
+links = 2
+
+[resource]
+script = ExtResource("3_aawf5")
+id = "tank_farm"
+display_name = "Tank Farm"
+cost = 90000.0
+footprint = 2
+model_id = "on_tank_farm"
+upkeep = 2.5
+hotkey = "8"
+category = "STORAGE"
+order = 8
+icon_index = 5
+icon_path = "res://assets/icons/tank_farm.png"
+description = "large buffer; bridges runs"
+minimap_color = Color(0.9, 0.93, 0.95, 1)
+spacing_role = "producer"
+spacing_cells = 2
+logistics = 0.5
+role = "buffer"
+ports = SubResource("Resource_3njsr")
+capacity = SubResource("Resource_m3b1m")

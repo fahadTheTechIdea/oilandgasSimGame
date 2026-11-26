@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="BuildingDefinition" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/capacity_spec.gd" id="1_6oxas"]
+[ext_resource type="Script" path="res://scripts/data/port_spec.gd" id="2_b1she"]
+[ext_resource type="Script" path="res://scripts/data/building_definition.gd" id="3_so4vi"]
+
+[sub_resource type="Resource" id="Resource_w7nrb"]
+script = ExtResource("1_6oxas")
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_v3wtd"]
+script = ExtResource("2_b1she")
+
+[resource]
+script = ExtResource("3_so4vi")
+id = "pipe_truck"
+display_name = "Pipe Truck"
+cost = 29000.0
+model_id = "veh_pipe_truck"
+upkeep = 0.12
+category = "FLEET"
+order = 23
+icon_path = "res://assets/icons/pipe_truck.png"
+description = "+3 logi to the selected street"
+minimap_color = Color(0.85, 0.8, 0.55, 1)
+logistics = 3.0
+unit_job = "logistics"
+role = "unit"
+ports = SubResource("Resource_v3wtd")
+capacity = SubResource("Resource_w7nrb")

@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="BuildingDefinition" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/capacity_spec.gd" id="1_0vech"]
+[ext_resource type="Script" path="res://scripts/data/port_spec.gd" id="2_sy3k4"]
+[ext_resource type="Script" path="res://scripts/data/building_definition.gd" id="3_osnsv"]
+
+[sub_resource type="Resource" id="Resource_gvo4m"]
+script = ExtResource("1_0vech")
+rate = 1.7
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_ey2wk"]
+script = ExtResource("2_sy3k4")
+out_sides = 7
+links = 1
+
+[resource]
+script = ExtResource("3_osnsv")
+id = "well"
+display_name = "Pumpjack"
+cost = 18000.0
+model_id = "on_pumpjack"
+upkeep = 1.2
+hotkey = "1"
+category = "UPSTREAM"
+order = 1
+icon_index = 4
+icon_path = "res://assets/icons/well.png"
+description = "place on a revealed deposit"
+minimap_color = Color(0.92, 0.62, 0.2, 1)
+requires_deposit = true
+logistics = 1.0
+ports = SubResource("Resource_ey2wk")
+capacity = SubResource("Resource_gvo4m")

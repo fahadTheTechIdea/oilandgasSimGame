@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="BuildingDefinition" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/capacity_spec.gd" id="1_4n5ee"]
+[ext_resource type="Script" path="res://scripts/data/port_spec.gd" id="2_bbp8a"]
+[ext_resource type="Script" path="res://scripts/data/building_definition.gd" id="3_yk6pn"]
+
+[sub_resource type="Resource" id="Resource_usy23"]
+script = ExtResource("1_4n5ee")
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_yd13l"]
+script = ExtResource("2_bbp8a")
+
+[resource]
+script = ExtResource("3_yk6pn")
+id = "seismic"
+display_name = "Seismic Vehicle"
+cost = 18000.0
+model_id = "veh_wireline_truck"
+upkeep = 0.1
+category = "FLEET"
+order = 25
+icon_path = "res://assets/icons/seismic.png"
+description = "surveys a 7-cell radius for oil"
+minimap_color = Color(0.55, 0.85, 0.95, 1)
+unit_job = "seismic"
+role = "unit"
+ports = SubResource("Resource_yd13l")
+capacity = SubResource("Resource_usy23")

@@ -1,0 +1,132 @@
+﻿[ok] gam_pipe_straight               468 tris   0.01s
+[ok] gam_pipe_corner                 580 tris   0.01s
+[ok] gam_pipe_tee                    740 tris   0.01s
+[ok] gam_pipe_cross                  992 tris   0.01s
+[ok] gam_pipe_end                    868 tris   0.01s
+[ok] gam_road_straight                60 tris   0.00s
+[ok] gam_road_corner                  36 tris   0.00s
+[ok] gam_road_tee                     72 tris   0.00s
+[ok] gam_road_cross                  132 tris   0.00s
+[FAIL] gam_storage: 'Asset' object has no attribute 'pipe_run'
+Traceback (most recent call last):
+  File "C:\Users\f_ald\source\repos\fahadTheTechIdea\oilandgasworld\blender\build.py", line 112, in main
+    entry["build"](a)
+    ~~~~~~~~~~~~~~^^^
+  File "C:\Users\f_ald\source\repos\fahadTheTechIdea\oilandgasworld\blender\kit\game.py", line 146, in game_storage
+    a.pipe_run(a, [(5.6, 0, 1.0), (7.6, 0, 1.0)], 0.35, "pipe_yellow")
+    ^^^^^^^^^^
+AttributeError: 'Asset' object has no attribute 'pipe_run'
+
+[ok] gam_refinery                   4597 tris   0.12s
+[ok] gam_explorer                    328 tris   0.00s
+[ok] gam_deposit                     200 tris   0.00s
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+08:25:47 | INFO: Starting glTF 2.0 export
+08:25:47 | INFO: Extracting primitive: gam_pipe_straight
+08:25:47 | INFO: Primitives created: 3
+08:25:47 | INFO: Finished glTF 2.0 export in 0.1229856014251709 s
+
+
+FBX export starting... 'C:\\Users\\f_ald\\source\\repos\\fahadTheTechIdea\\oilandgasworld\\assets\\fbx\\game\\gam_pipe_straight.fbx'
+export finished in 0.0115 sec.
+08:25:48 | INFO: Starting glTF 2.0 export
+08:25:48 | INFO: Extracting primitive: gam_pipe_corner
+08:25:48 | INFO: Primitives created: 3
+08:25:48 | INFO: Finished glTF 2.0 export in 0.013223409652709961 s
+
+
+FBX export starting... 'C:\\Users\\f_ald\\source\\repos\\fahadTheTechIdea\\oilandgasworld\\assets\\fbx\\game\\gam_pipe_corner.fbx'
+export finished in 0.0085 sec.
+08:25:48 | INFO: Starting glTF 2.0 export
+08:25:48 | INFO: Extracting primitive: gam_pipe_tee
+08:25:48 | INFO: Primitives created: 3
+08:25:48 | INFO: Finished glTF 2.0 export in 0.013059377670288086 s
+
+
+FBX export starting... 'C:\\Users\\f_ald\\source\\repos\\fahadTheTechIdea\\oilandgasworld\\assets\\fbx\\game\\gam_pipe_tee.fbx'
+export finished in 0.0089 sec.
+08:25:48 | INFO: Starting glTF 2.0 export
+08:25:48 | INFO: Extracting primitive: gam_pipe_cross
+08:25:48 | INFO: Primitives created: 3
+08:25:48 | INFO: Finished glTF 2.0 export in 0.01333475112915039 s
+
+
+FBX export starting... 'C:\\Users\\f_ald\\source\\repos\\fahadTheTechIdea\\oilandgasworld\\assets\\fbx\\game\\gam_pipe_cross.fbx'
+export finished in 0.0099 sec.
+08:25:48 | INFO: Starting glTF 2.0 export
+08:25:48 | INFO: Extracting primitive: gam_pipe_end
+08:25:48 | INFO: Primitives created: 5
+08:25:48 | INFO: Finished glTF 2.0 export in 0.025667428970336914 s
+
+
+FBX export starting... 'C:\\Users\\f_ald\\source\\repos\\fahadTheTechIdea\\oilandgasworld\\assets\\fbx\\game\\gam_pipe_end.fbx'
+export finished in 0.0104 sec.
+08:25:48 | INFO: Starting glTF 2.0 export
+08:25:48 | INFO: Extracting primitive: gam_road_straight
+08:25:48 | INFO: Primitives created: 2
+08:25:48 | INFO: Finished glTF 2.0 export in 0.008879423141479492 s
+
+
+FBX export starting... 'C:\\Users\\f_ald\\source\\repos\\fahadTheTechIdea\\oilandgasworld\\assets\\fbx\\game\\gam_road_straight.fbx'
+export finished in 0.0085 sec.
+08:25:48 | INFO: Starting glTF 2.0 export
+08:25:48 | INFO: Extracting primitive: gam_road_corner
+08:25:48 | INFO: Primitives created: 1
+08:25:48 | INFO: Finished glTF 2.0 export in 0.006294965744018555 s
+
+
+FBX export starting... 'C:\\Users\\f_ald\\source\\repos\\fahadTheTechIdea\\oilandgasworld\\assets\\fbx\\game\\gam_road_corner.fbx'
+export finished in 0.0082 sec.
+08:25:48 | INFO: Starting glTF 2.0 export
+08:25:48 | INFO: Extracting primitive: gam_road_tee
+08:25:48 | INFO: Primitives created: 2
+08:25:48 | INFO: Finished glTF 2.0 export in 0.008519411087036133 s
+
+
+FBX export starting... 'C:\\Users\\f_ald\\source\\repos\\fahadTheTechIdea\\oilandgasworld\\assets\\fbx\\game\\gam_road_tee.fbx'
+export finished in 0.0070 sec.
+08:25:48 | INFO: Starting glTF 2.0 export
+08:25:48 | INFO: Extracting primitive: gam_road_cross
+08:25:48 | INFO: Primitives created: 2
+08:25:48 | INFO: Finished glTF 2.0 export in 0.010073184967041016 s
+
+
+FBX export starting... 'C:\\Users\\f_ald\\source\\repos\\fahadTheTechIdea\\oilandgasworld\\assets\\fbx\\game\\gam_road_cross.fbx'
+export finished in 0.0071 sec.
+08:25:48 | INFO: Starting glTF 2.0 export
+08:25:48 | INFO: Extracting primitive: gam_refinery
+08:25:48 | INFO: Primitives created: 15
+08:25:48 | INFO: Finished glTF 2.0 export in 0.055011749267578125 s
+
+
+FBX export starting... 'C:\\Users\\f_ald\\source\\repos\\fahadTheTechIdea\\oilandgasworld\\assets\\fbx\\game\\gam_refinery.fbx'
+export finished in 0.0171 sec.
+08:25:48 | INFO: Starting glTF 2.0 export
+08:25:48 | INFO: Extracting primitive: gam_explorer
+08:25:48 | INFO: Primitives created: 9
+08:25:48 | INFO: Finished glTF 2.0 export in 0.029422998428344727 s
+
+
+FBX export starting... 'C:\\Users\\f_ald\\source\\repos\\fahadTheTechIdea\\oilandgasworld\\assets\\fbx\\game\\gam_explorer.fbx'
+export finished in 0.0100 sec.
+08:25:48 | INFO: Starting glTF 2.0 export
+08:25:48 | INFO: Extracting primitive: gam_deposit
+08:25:48 | INFO: Primitives created: 6
+08:25:48 | INFO: Finished glTF 2.0 export in 0.02092742919921875 s
+
+
+FBX export starting... 'C:\\Users\\f_ald\\source\\repos\\fahadTheTechIdea\\oilandgasworld\\assets\\fbx\\game\\gam_deposit.fbx'
+export finished in 0.0199 sec.
+[ok] exported kit
+[info] filtered build ΓÇö master .blend and manifest left untouched
+
+=== DONE in 3.5s ===
+assets: 12  tris: 9,073
+manifest: assets/json/manifest.json
+
+1 problem(s):
+ - gam_storage: 'Asset' object has no attribute 'pipe_run'
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 02:38:20)
+
+Blender quit

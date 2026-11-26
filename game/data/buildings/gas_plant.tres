@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="BuildingDefinition" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/capacity_spec.gd" id="1_ffa7g"]
+[ext_resource type="Script" path="res://scripts/data/port_spec.gd" id="2_i0lh7"]
+[ext_resource type="Script" path="res://scripts/data/building_definition.gd" id="3_mpgi7"]
+
+[sub_resource type="Resource" id="Resource_vry2r"]
+script = ExtResource("1_ffa7g")
+yield_bonus = 0.06
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_eudlt"]
+script = ExtResource("2_i0lh7")
+in_sides = 15
+out_sides = 15
+links = 2
+
+[resource]
+script = ExtResource("3_mpgi7")
+id = "gas_plant"
+display_name = "Gas Plant"
+cost = 150000.0
+footprint = 2
+model_id = "mid_gas_plant"
+upkeep = 4.0
+category = "PROCESSING"
+order = 25
+icon_path = "res://assets/icons/gas_plant.png"
+description = "gas processing (+6% yield)"
+minimap_color = Color(0.7, 0.9, 0.7, 1)
+logistics = 0.5
+role = "processor"
+ports = SubResource("Resource_eudlt")
+capacity = SubResource("Resource_vry2r")

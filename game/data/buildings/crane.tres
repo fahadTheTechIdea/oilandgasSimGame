@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="BuildingDefinition" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/capacity_spec.gd" id="1_haxp0"]
+[ext_resource type="Script" path="res://scripts/data/port_spec.gd" id="2_th1jf"]
+[ext_resource type="Script" path="res://scripts/data/building_definition.gd" id="3_08guj"]
+
+[sub_resource type="Resource" id="Resource_2svkg"]
+script = ExtResource("1_haxp0")
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_a810g"]
+script = ExtResource("2_th1jf")
+
+[resource]
+script = ExtResource("3_08guj")
+id = "crane"
+display_name = "Mobile Crane"
+cost = 45000.0
+model_id = "veh_constructor"
+upkeep = 0.2
+category = "FLEET"
+order = 24
+icon_path = "res://assets/icons/crane.png"
+description = "builds structures on a site"
+minimap_color = Color(0.8, 0.85, 0.55, 1)
+unit_job = "build"
+role = "unit"
+ports = SubResource("Resource_a810g")
+capacity = SubResource("Resource_2svkg")

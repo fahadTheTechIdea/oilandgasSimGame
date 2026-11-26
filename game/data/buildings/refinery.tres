@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="BuildingDefinition" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/capacity_spec.gd" id="1_obcqn"]
+[ext_resource type="Script" path="res://scripts/data/port_spec.gd" id="2_wkenv"]
+[ext_resource type="Script" path="res://scripts/data/building_definition.gd" id="3_sixxs"]
+
+[sub_resource type="Resource" id="Resource_1r0l1"]
+script = ExtResource("1_obcqn")
+feed = 3.4
+yield_ratio = 0.92
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_1m2iw"]
+script = ExtResource("2_wkenv")
+in_sides = 7
+links = 1
+
+[resource]
+script = ExtResource("3_sixxs")
+id = "refinery"
+display_name = "Refinery"
+cost = 120000.0
+footprint = 2
+model_id = "gam_refinery"
+upkeep = 4.0
+hotkey = "3"
+category = "REFINING"
+order = 3
+icon_index = 6
+icon_path = "res://assets/icons/refinery.png"
+description = "needs a pipe link to storage"
+minimap_color = Color(0.45, 0.78, 0.9, 1)
+logistics = 2.0
+role = "consumer"
+ports = SubResource("Resource_1m2iw")
+capacity = SubResource("Resource_1r0l1")

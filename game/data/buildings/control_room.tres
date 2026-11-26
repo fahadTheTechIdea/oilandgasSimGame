@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="BuildingDefinition" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/capacity_spec.gd" id="1_0uv4n"]
+[ext_resource type="Script" path="res://scripts/data/port_spec.gd" id="2_kuo3f"]
+[ext_resource type="Script" path="res://scripts/data/building_definition.gd" id="3_ikbec"]
+
+[sub_resource type="Resource" id="Resource_6jvh2"]
+script = ExtResource("1_0uv4n")
+yield_bonus = 0.03
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_qa4xf"]
+script = ExtResource("2_kuo3f")
+in_sides = 15
+out_sides = 15
+links = 2
+
+[resource]
+script = ExtResource("3_ikbec")
+id = "control_room"
+display_name = "Control Room"
+cost = 60000.0
+model_id = "ref_control_room"
+upkeep = 1.2
+category = "PROCESSING"
+order = 18
+icon_path = "res://assets/icons/control_room.png"
+description = "automation (+3% yield)"
+minimap_color = Color(0.7, 0.9, 0.7, 1)
+logistics = 0.5
+role = "processor"
+ports = SubResource("Resource_qa4xf")
+capacity = SubResource("Resource_6jvh2")

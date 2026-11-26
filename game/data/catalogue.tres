@@ -1,0 +1,959 @@
+[gd_resource type="Resource" script_class="BuildingCatalogue" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/building_definition.gd" id="1_srrqw"]
+[ext_resource type="Script" path="res://scripts/data/capacity_spec.gd" id="2_wcmjd"]
+[ext_resource type="Script" path="res://scripts/data/port_spec.gd" id="3_xnly7"]
+[ext_resource type="Script" path="res://scripts/data/building_catalogue.gd" id="4_nsr7y"]
+
+[sub_resource type="Resource" id="Resource_gvo4m"]
+script = ExtResource("2_wcmjd")
+rate = 1.7
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_ey2wk"]
+script = ExtResource("3_xnly7")
+out_sides = 7
+links = 1
+
+[sub_resource type="Resource" id="Resource_27bmu"]
+script = ExtResource("1_srrqw")
+id = "well"
+display_name = "Pumpjack"
+cost = 18000.0
+model_id = "on_pumpjack"
+upkeep = 1.2
+hotkey = "1"
+category = "UPSTREAM"
+order = 1
+icon_index = 4
+icon_path = "res://assets/icons/well.png"
+description = "place on a revealed deposit"
+minimap_color = Color(0.92, 0.62, 0.2, 1)
+requires_deposit = true
+logistics = 1.0
+ports = SubResource("Resource_ey2wk")
+capacity = SubResource("Resource_gvo4m")
+
+[sub_resource type="Resource" id="Resource_8eil0"]
+script = ExtResource("2_wcmjd")
+volume = 600.0
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_ne7hi"]
+script = ExtResource("3_xnly7")
+in_sides = 15
+out_sides = 15
+links = 2
+
+[sub_resource type="Resource" id="Resource_skd88"]
+script = ExtResource("1_srrqw")
+id = "storage"
+display_name = "Storage Tank"
+cost = 25000.0
+model_id = "gam_storage"
+upkeep = 0.7
+hotkey = "2"
+category = "STORAGE"
+order = 2
+icon_index = 5
+icon_path = "res://assets/icons/storage.png"
+description = "buffers crude and bridges runs"
+minimap_color = Color(0.9, 0.93, 0.95, 1)
+spacing_role = "producer"
+spacing_cells = 2
+logistics = 0.5
+role = "buffer"
+ports = SubResource("Resource_ne7hi")
+capacity = SubResource("Resource_8eil0")
+
+[sub_resource type="Resource" id="Resource_1r0l1"]
+script = ExtResource("2_wcmjd")
+feed = 3.4
+yield_ratio = 0.92
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_1m2iw"]
+script = ExtResource("3_xnly7")
+in_sides = 7
+links = 1
+
+[sub_resource type="Resource" id="Resource_u41jt"]
+script = ExtResource("1_srrqw")
+id = "refinery"
+display_name = "Refinery"
+cost = 120000.0
+footprint = 2
+model_id = "gam_refinery"
+upkeep = 4.0
+hotkey = "3"
+category = "REFINING"
+order = 3
+icon_index = 6
+icon_path = "res://assets/icons/refinery.png"
+description = "needs a pipe link to storage"
+minimap_color = Color(0.45, 0.78, 0.9, 1)
+logistics = 2.0
+role = "consumer"
+ports = SubResource("Resource_1m2iw")
+capacity = SubResource("Resource_1r0l1")
+
+[sub_resource type="Resource" id="Resource_j1ma2"]
+script = ExtResource("2_wcmjd")
+radius = 11.0
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_6vuyk"]
+script = ExtResource("3_xnly7")
+
+[sub_resource type="Resource" id="Resource_80g0r"]
+script = ExtResource("1_srrqw")
+id = "explorer"
+display_name = "Exploration Office"
+cost = 30000.0
+model_id = "gam_explorer"
+upkeep = 2.0
+hotkey = "4"
+category = "UPSTREAM"
+order = 4
+icon_index = 3
+icon_path = "res://assets/icons/explorer.png"
+description = "needs road access to survey"
+minimap_color = Color(0.62, 0.9, 0.52, 1)
+logistics = 1.0
+role = "survey"
+ports = SubResource("Resource_6vuyk")
+capacity = SubResource("Resource_j1ma2")
+
+[sub_resource type="Resource" id="Resource_87p1q"]
+script = ExtResource("2_wcmjd")
+pipe_base = 4.0
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_lxc1w"]
+script = ExtResource("3_xnly7")
+
+[sub_resource type="Resource" id="Resource_enutl"]
+script = ExtResource("1_srrqw")
+id = "pipe"
+display_name = "Pipeline"
+cost = 400.0
+upkeep = 0.02
+hotkey = "5"
+category = "INFRASTRUCTURE"
+order = 5
+icon_path = "res://assets/icons/pipe.png"
+description = "drag to lay · G changes grade · 4 / 8 / 16 bbl/s"
+minimap_color = Color(0.86, 0.71, 0.16, 1)
+role = "transport"
+ports = SubResource("Resource_lxc1w")
+capacity = SubResource("Resource_87p1q")
+
+[sub_resource type="Resource" id="Resource_gdjvg"]
+script = ExtResource("2_wcmjd")
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+gates = true
+road_base = 2.0
+road_per_cell = 0.5
+
+[sub_resource type="Resource" id="Resource_pxjjw"]
+script = ExtResource("3_xnly7")
+
+[sub_resource type="Resource" id="Resource_c60q8"]
+script = ExtResource("1_srrqw")
+id = "road"
+display_name = "Road"
+cost = 200.0
+upkeep = 0.01
+hotkey = "6"
+category = "INFRASTRUCTURE"
+order = 6
+icon_path = "res://assets/icons/road.png"
+description = "drag to lay · $200 per cell"
+minimap_color = Color(0.4, 0.42, 0.38, 1)
+role = "access"
+ports = SubResource("Resource_pxjjw")
+capacity = SubResource("Resource_gdjvg")
+
+[sub_resource type="Resource" id="Resource_1q1ex"]
+script = ExtResource("2_wcmjd")
+boost = 8.0
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_c7v5g"]
+script = ExtResource("3_xnly7")
+in_sides = 15
+out_sides = 15
+links = 2
+
+[sub_resource type="Resource" id="Resource_nh14k"]
+script = ExtResource("1_srrqw")
+id = "pump"
+display_name = "Pump Station"
+cost = 45000.0
+model_id = "mid_pump_station"
+upkeep = 3.0
+hotkey = "7"
+category = "PROCESSING"
+order = 7
+icon_index = 7
+icon_path = "res://assets/icons/pump.png"
+description = "boosts its pipe run"
+minimap_color = Color(0.95, 0.85, 0.35, 1)
+logistics = 0.5
+role = "booster"
+ports = SubResource("Resource_c7v5g")
+capacity = SubResource("Resource_1q1ex")
+
+[sub_resource type="Resource" id="Resource_m3b1m"]
+script = ExtResource("2_wcmjd")
+volume = 2400.0
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_3njsr"]
+script = ExtResource("3_xnly7")
+in_sides = 15
+out_sides = 15
+links = 2
+
+[sub_resource type="Resource" id="Resource_gb1i3"]
+script = ExtResource("1_srrqw")
+id = "tank_farm"
+display_name = "Tank Farm"
+cost = 90000.0
+footprint = 2
+model_id = "on_tank_farm"
+upkeep = 2.5
+hotkey = "8"
+category = "STORAGE"
+order = 8
+icon_index = 5
+icon_path = "res://assets/icons/tank_farm.png"
+description = "large buffer; bridges runs"
+minimap_color = Color(0.9, 0.93, 0.95, 1)
+spacing_role = "producer"
+spacing_cells = 2
+logistics = 0.5
+role = "buffer"
+ports = SubResource("Resource_3njsr")
+capacity = SubResource("Resource_m3b1m")
+
+[sub_resource type="Resource" id="Resource_qxp1q"]
+script = ExtResource("2_wcmjd")
+yield_bonus = 0.1
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_vvpv0"]
+script = ExtResource("3_xnly7")
+in_sides = 15
+out_sides = 15
+links = 2
+
+[sub_resource type="Resource" id="Resource_owh2p"]
+script = ExtResource("1_srrqw")
+id = "separator"
+display_name = "Separator"
+cost = 40000.0
+model_id = "on_separator"
+upkeep = 1.5
+hotkey = "9"
+category = "PROCESSING"
+order = 9
+icon_path = "res://assets/icons/separator.png"
+description = "cleans well flow for its run (+10% yield)"
+minimap_color = Color(0.7, 0.9, 0.7, 1)
+logistics = 0.5
+role = "processor"
+ports = SubResource("Resource_vvpv0")
+capacity = SubResource("Resource_qxp1q")
+
+[sub_resource type="Resource" id="Resource_ocf5m"]
+script = ExtResource("2_wcmjd")
+price_bonus = 0.06
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_rtvnd"]
+script = ExtResource("3_xnly7")
+in_sides = 15
+out_sides = 15
+links = 2
+
+[sub_resource type="Resource" id="Resource_3sw2p"]
+script = ExtResource("1_srrqw")
+id = "metering"
+display_name = "Metering Skid"
+cost = 35000.0
+model_id = "on_metering_skid"
+upkeep = 1.0
+hotkey = "0"
+category = "PROCESSING"
+order = 10
+icon_path = "res://assets/icons/metering.png"
+description = "custody-transfer meter (+6% price)"
+minimap_color = Color(0.8, 0.7, 0.95, 1)
+logistics = 0.5
+role = "meter"
+ports = SubResource("Resource_rtvnd")
+capacity = SubResource("Resource_ocf5m")
+
+[sub_resource type="Resource" id="Resource_5dcq7"]
+script = ExtResource("2_wcmjd")
+boost = 5.0
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_v8kol"]
+script = ExtResource("3_xnly7")
+in_sides = 15
+out_sides = 15
+links = 2
+
+[sub_resource type="Resource" id="Resource_y8s3l"]
+script = ExtResource("1_srrqw")
+id = "compressor"
+display_name = "Compressor Station"
+cost = 55000.0
+model_id = "on_compressor_station"
+upkeep = 3.5
+hotkey = "-"
+category = "PROCESSING"
+order = 11
+icon_path = "res://assets/icons/compressor.png"
+description = "boosts its pipe run (+5 bbl/s)"
+minimap_color = Color(0.95, 0.85, 0.35, 1)
+logistics = 0.5
+role = "booster"
+ports = SubResource("Resource_v8kol")
+capacity = SubResource("Resource_5dcq7")
+
+[sub_resource type="Resource" id="Resource_fm3cm"]
+script = ExtResource("2_wcmjd")
+boost = 2.0
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_q2frw"]
+script = ExtResource("3_xnly7")
+in_sides = 15
+out_sides = 15
+links = 2
+
+[sub_resource type="Resource" id="Resource_pf2dv"]
+script = ExtResource("1_srrqw")
+id = "manifold"
+display_name = "Gathering Manifold"
+cost = 18000.0
+model_id = "on_gathering_manifold"
+upkeep = 1.0
+hotkey = "="
+category = "PROCESSING"
+order = 12
+icon_path = "res://assets/icons/manifold.png"
+description = "small throughput boost / junction"
+minimap_color = Color(0.95, 0.85, 0.35, 1)
+logistics = 0.5
+role = "booster"
+ports = SubResource("Resource_q2frw")
+capacity = SubResource("Resource_fm3cm")
+
+[sub_resource type="Resource" id="Resource_xgihp"]
+script = ExtResource("2_wcmjd")
+yield_bonus = 0.08
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_8y0sy"]
+script = ExtResource("3_xnly7")
+in_sides = 15
+out_sides = 15
+links = 2
+
+[sub_resource type="Resource" id="Resource_n3wga"]
+script = ExtResource("1_srrqw")
+id = "heater_treater"
+display_name = "Heater Treater"
+cost = 50000.0
+model_id = "on_heater_treater"
+upkeep = 1.8
+category = "PROCESSING"
+order = 13
+icon_path = "res://assets/icons/heater_treater.png"
+description = "heats the emulsion (+8% yield)"
+minimap_color = Color(0.7, 0.9, 0.7, 1)
+logistics = 0.5
+role = "processor"
+ports = SubResource("Resource_8y0sy")
+capacity = SubResource("Resource_xgihp")
+
+[sub_resource type="Resource" id="Resource_lhpgk"]
+script = ExtResource("2_wcmjd")
+yield_bonus = 0.05
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_2x3fn"]
+script = ExtResource("3_xnly7")
+in_sides = 15
+out_sides = 15
+links = 2
+
+[sub_resource type="Resource" id="Resource_m3oj7"]
+script = ExtResource("1_srrqw")
+id = "flare"
+display_name = "Flare"
+cost = 20000.0
+model_id = "on_flare"
+upkeep = 0.8
+category = "PROCESSING"
+order = 14
+icon_path = "res://assets/icons/flare.png"
+description = "safe operations (+5% yield)"
+minimap_color = Color(0.95, 0.55, 0.35, 1)
+logistics = 0.5
+role = "processor"
+ports = SubResource("Resource_2x3fn")
+capacity = SubResource("Resource_lhpgk")
+
+[sub_resource type="Resource" id="Resource_j5ner"]
+script = ExtResource("2_wcmjd")
+feed = 5.0
+yield_ratio = 0.9
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_2potr"]
+script = ExtResource("3_xnly7")
+in_sides = 7
+links = 1
+
+[sub_resource type="Resource" id="Resource_nq3bv"]
+script = ExtResource("1_srrqw")
+id = "refinery_cdu"
+display_name = "Crude Distillation Unit"
+cost = 180000.0
+footprint = 2
+model_id = "ref_cdu"
+upkeep = 6.0
+category = "REFINING"
+order = 15
+icon_path = "res://assets/icons/refinery_cdu.png"
+description = "larger refinery feed (5 bbl/s)"
+minimap_color = Color(0.45, 0.78, 0.9, 1)
+logistics = 2.0
+role = "consumer"
+ports = SubResource("Resource_2potr")
+capacity = SubResource("Resource_j5ner")
+
+[sub_resource type="Resource" id="Resource_cjf38"]
+script = ExtResource("2_wcmjd")
+feed = 4.5
+yield_ratio = 0.93
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_w0q32"]
+script = ExtResource("3_xnly7")
+in_sides = 7
+links = 1
+
+[sub_resource type="Resource" id="Resource_8wd87"]
+script = ExtResource("1_srrqw")
+id = "refinery_vdu"
+display_name = "Vacuum Distillation"
+cost = 220000.0
+footprint = 2
+model_id = "ref_vdu"
+upkeep = 5.0
+category = "REFINING"
+order = 16
+icon_path = "res://assets/icons/refinery_vdu.png"
+description = "vacuum unit (4.5 bbl/s feed)"
+minimap_color = Color(0.45, 0.78, 0.9, 1)
+logistics = 2.0
+role = "consumer"
+ports = SubResource("Resource_w0q32")
+capacity = SubResource("Resource_cjf38")
+
+[sub_resource type="Resource" id="Resource_hgl8t"]
+script = ExtResource("2_wcmjd")
+feed = 6.5
+yield_ratio = 0.95
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_6vmb1"]
+script = ExtResource("3_xnly7")
+in_sides = 7
+links = 1
+
+[sub_resource type="Resource" id="Resource_g8qbm"]
+script = ExtResource("1_srrqw")
+id = "refinery_fcc"
+display_name = "Catalytic Cracker"
+cost = 320000.0
+footprint = 2
+model_id = "ref_fcc"
+upkeep = 7.0
+category = "REFINING"
+order = 17
+icon_path = "res://assets/icons/refinery_fcc.png"
+description = "catalytic cracker (6.5 bbl/s feed)"
+minimap_color = Color(0.45, 0.78, 0.9, 1)
+logistics = 2.0
+role = "consumer"
+ports = SubResource("Resource_6vmb1")
+capacity = SubResource("Resource_hgl8t")
+
+[sub_resource type="Resource" id="Resource_6jvh2"]
+script = ExtResource("2_wcmjd")
+yield_bonus = 0.03
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_qa4xf"]
+script = ExtResource("3_xnly7")
+in_sides = 15
+out_sides = 15
+links = 2
+
+[sub_resource type="Resource" id="Resource_i6c1w"]
+script = ExtResource("1_srrqw")
+id = "control_room"
+display_name = "Control Room"
+cost = 60000.0
+model_id = "ref_control_room"
+upkeep = 1.2
+category = "PROCESSING"
+order = 18
+icon_path = "res://assets/icons/control_room.png"
+description = "automation (+3% yield)"
+minimap_color = Color(0.7, 0.9, 0.7, 1)
+logistics = 0.5
+role = "processor"
+ports = SubResource("Resource_qa4xf")
+capacity = SubResource("Resource_6jvh2")
+
+[sub_resource type="Resource" id="Resource_j24ky"]
+script = ExtResource("2_wcmjd")
+yield_bonus = 0.02
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_ej3s0"]
+script = ExtResource("3_xnly7")
+in_sides = 15
+out_sides = 15
+links = 2
+
+[sub_resource type="Resource" id="Resource_pjuou"]
+script = ExtResource("1_srrqw")
+id = "cooling_tower"
+display_name = "Cooling Tower"
+cost = 40000.0
+footprint = 2
+model_id = "ref_cooling_tower"
+upkeep = 1.0
+category = "PROCESSING"
+order = 19
+icon_path = "res://assets/icons/cooling_tower.png"
+description = "process cooling (+2% yield)"
+minimap_color = Color(0.7, 0.9, 0.7, 1)
+logistics = 0.5
+role = "processor"
+ports = SubResource("Resource_ej3s0")
+capacity = SubResource("Resource_j24ky")
+
+[sub_resource type="Resource" id="Resource_4e72u"]
+script = ExtResource("2_wcmjd")
+boost = 3.0
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_l5qb2"]
+script = ExtResource("3_xnly7")
+in_sides = 15
+out_sides = 15
+links = 2
+
+[sub_resource type="Resource" id="Resource_lgkl4"]
+script = ExtResource("1_srrqw")
+id = "pig_launcher"
+display_name = "Pig Launcher"
+cost = 30000.0
+model_id = "mid_pig_launcher"
+upkeep = 0.8
+category = "PROCESSING"
+order = 20
+icon_path = "res://assets/icons/pig_launcher.png"
+description = "pipeline maintenance (+3 bbl/s)"
+minimap_color = Color(0.95, 0.85, 0.35, 1)
+logistics = 0.5
+role = "booster"
+ports = SubResource("Resource_l5qb2")
+capacity = SubResource("Resource_4e72u")
+
+[sub_resource type="Resource" id="Resource_vry2r"]
+script = ExtResource("2_wcmjd")
+yield_bonus = 0.06
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_eudlt"]
+script = ExtResource("3_xnly7")
+in_sides = 15
+out_sides = 15
+links = 2
+
+[sub_resource type="Resource" id="Resource_urj1v"]
+script = ExtResource("1_srrqw")
+id = "gas_plant"
+display_name = "Gas Plant"
+cost = 150000.0
+footprint = 2
+model_id = "mid_gas_plant"
+upkeep = 4.0
+category = "PROCESSING"
+order = 25
+icon_path = "res://assets/icons/gas_plant.png"
+description = "gas processing (+6% yield)"
+minimap_color = Color(0.7, 0.9, 0.7, 1)
+logistics = 0.5
+role = "processor"
+ports = SubResource("Resource_eudlt")
+capacity = SubResource("Resource_vry2r")
+
+[sub_resource type="Resource" id="Resource_d7inl"]
+script = ExtResource("2_wcmjd")
+yield_bonus = 0.03
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_fc5kt"]
+script = ExtResource("3_xnly7")
+in_sides = 15
+out_sides = 15
+links = 2
+
+[sub_resource type="Resource" id="Resource_fuw7m"]
+script = ExtResource("1_srrqw")
+id = "water_disposal"
+display_name = "Water Disposal"
+cost = 35000.0
+model_id = "on_saltwater_disposal"
+upkeep = 1.0
+category = "PROCESSING"
+order = 26
+icon_path = "res://assets/icons/water_disposal.png"
+description = "produced-water handling (+3% yield)"
+minimap_color = Color(0.7, 0.9, 0.7, 1)
+logistics = 0.5
+role = "processor"
+ports = SubResource("Resource_fc5kt")
+capacity = SubResource("Resource_d7inl")
+
+[sub_resource type="Resource" id="Resource_s1xnl"]
+script = ExtResource("2_wcmjd")
+volume = 3600.0
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_qxh2v"]
+script = ExtResource("3_xnly7")
+in_sides = 15
+out_sides = 15
+links = 2
+
+[sub_resource type="Resource" id="Resource_e8t40"]
+script = ExtResource("1_srrqw")
+id = "tank_terminal"
+display_name = "Tank Terminal"
+cost = 160000.0
+footprint = 2
+model_id = "mid_tank_terminal"
+upkeep = 3.0
+category = "STORAGE"
+order = 27
+icon_path = "res://assets/icons/tank_terminal.png"
+description = "large terminal storage (3,600 bbl)"
+minimap_color = Color(0.9, 0.93, 0.95, 1)
+spacing_role = "producer"
+spacing_cells = 2
+logistics = 0.5
+role = "buffer"
+ports = SubResource("Resource_qxh2v")
+capacity = SubResource("Resource_s1xnl")
+
+[sub_resource type="Resource" id="Resource_elt8v"]
+script = ExtResource("2_wcmjd")
+boost = 2.0
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_unvwc"]
+script = ExtResource("3_xnly7")
+in_sides = 15
+out_sides = 15
+links = 2
+
+[sub_resource type="Resource" id="Resource_em4km"]
+script = ExtResource("1_srrqw")
+id = "slug_catcher"
+display_name = "Slug Catcher"
+cost = 40000.0
+model_id = "mid_slug_catcher"
+upkeep = 1.0
+category = "PROCESSING"
+order = 28
+icon_path = "res://assets/icons/slug_catcher.png"
+description = "flow smoothing (+2 bbl/s)"
+minimap_color = Color(0.95, 0.85, 0.35, 1)
+logistics = 0.5
+role = "booster"
+ports = SubResource("Resource_unvwc")
+capacity = SubResource("Resource_elt8v")
+
+[sub_resource type="Resource" id="Resource_u5uyu"]
+script = ExtResource("2_wcmjd")
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_ksbt7"]
+script = ExtResource("3_xnly7")
+
+[sub_resource type="Resource" id="Resource_3cok4"]
+script = ExtResource("1_srrqw")
+id = "depot"
+display_name = "Truck Depot"
+cost = 45000.0
+model_id = "prp_workshop"
+upkeep = 1.2
+category = "INFRASTRUCTURE"
+order = 29
+icon_path = "res://assets/icons/depot.png"
+description = "+3 street logistics on its network"
+minimap_color = Color(0.85, 0.78, 0.55, 1)
+network_boost = 3.0
+role = "access"
+ports = SubResource("Resource_ksbt7")
+capacity = SubResource("Resource_u5uyu")
+
+[sub_resource type="Resource" id="Resource_xirnk"]
+script = ExtResource("2_wcmjd")
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_ynmx2"]
+script = ExtResource("3_xnly7")
+
+[sub_resource type="Resource" id="Resource_grir8"]
+script = ExtResource("1_srrqw")
+id = "base"
+display_name = "Field Base"
+footprint = 2
+model_id = "ref_control_room"
+upkeep = 2.0
+category = "BASE"
+icon_path = "res://assets/icons/base.png"
+description = "HQ — launches survey and site-prep units"
+minimap_color = Color(0.95, 0.85, 0.35, 1)
+buildable = false
+role = "base"
+ports = SubResource("Resource_ynmx2")
+capacity = SubResource("Resource_xirnk")
+
+[sub_resource type="Resource" id="Resource_usy23"]
+script = ExtResource("2_wcmjd")
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_yd13l"]
+script = ExtResource("3_xnly7")
+
+[sub_resource type="Resource" id="Resource_dhtwd"]
+script = ExtResource("1_srrqw")
+id = "seismic"
+display_name = "Seismic Vehicle"
+cost = 18000.0
+model_id = "veh_wireline_truck"
+upkeep = 0.1
+category = "FLEET"
+order = 25
+icon_path = "res://assets/icons/seismic.png"
+description = "surveys a 7-cell radius for oil"
+minimap_color = Color(0.55, 0.85, 0.95, 1)
+unit_job = "seismic"
+role = "unit"
+ports = SubResource("Resource_yd13l")
+capacity = SubResource("Resource_usy23")
+
+[sub_resource type="Resource" id="Resource_0x4nt"]
+script = ExtResource("2_wcmjd")
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_xveut"]
+script = ExtResource("3_xnly7")
+
+[sub_resource type="Resource" id="Resource_idq7h"]
+script = ExtResource("1_srrqw")
+id = "bulldozer"
+display_name = "Site Bulldozer"
+cost = 22000.0
+model_id = "veh_bulldozer"
+upkeep = 0.12
+category = "FLEET"
+order = 26
+icon_path = "res://assets/icons/bulldozer.png"
+description = "levels and prepares a 2×2 site"
+minimap_color = Color(0.95, 0.75, 0.35, 1)
+unit_job = "prep"
+role = "unit"
+ports = SubResource("Resource_xveut")
+capacity = SubResource("Resource_0x4nt")
+
+[sub_resource type="Resource" id="Resource_pvdva"]
+script = ExtResource("2_wcmjd")
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_ces5e"]
+script = ExtResource("3_xnly7")
+
+[sub_resource type="Resource" id="Resource_0ap0s"]
+script = ExtResource("1_srrqw")
+id = "pickup"
+display_name = "Crew Pickup"
+cost = 8000.0
+model_id = "veh_pickup"
+upkeep = 0.05
+category = "FLEET"
+order = 21
+icon_path = "res://assets/icons/pickup.png"
+description = "+2 logi to the selected street"
+minimap_color = Color(0.85, 0.8, 0.55, 1)
+logistics = 2.0
+unit_job = "logistics"
+role = "unit"
+ports = SubResource("Resource_ces5e")
+capacity = SubResource("Resource_pvdva")
+
+[sub_resource type="Resource" id="Resource_5a2tv"]
+script = ExtResource("2_wcmjd")
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_xmfwf"]
+script = ExtResource("3_xnly7")
+
+[sub_resource type="Resource" id="Resource_qph6p"]
+script = ExtResource("1_srrqw")
+id = "fuel_tanker"
+display_name = "Fuel Tanker"
+cost = 26000.0
+model_id = "veh_fuel_tanker"
+upkeep = 0.15
+category = "FLEET"
+order = 22
+icon_path = "res://assets/icons/fuel_tanker.png"
+description = "hauls crude from a well to the base"
+minimap_color = Color(0.95, 0.6, 0.3, 1)
+unit_job = "hauler"
+role = "unit"
+ports = SubResource("Resource_xmfwf")
+capacity = SubResource("Resource_5a2tv")
+
+[sub_resource type="Resource" id="Resource_w7nrb"]
+script = ExtResource("2_wcmjd")
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_v3wtd"]
+script = ExtResource("3_xnly7")
+
+[sub_resource type="Resource" id="Resource_eu7qy"]
+script = ExtResource("1_srrqw")
+id = "pipe_truck"
+display_name = "Pipe Truck"
+cost = 29000.0
+model_id = "veh_pipe_truck"
+upkeep = 0.12
+category = "FLEET"
+order = 23
+icon_path = "res://assets/icons/pipe_truck.png"
+description = "+3 logi to the selected street"
+minimap_color = Color(0.85, 0.8, 0.55, 1)
+logistics = 3.0
+unit_job = "logistics"
+role = "unit"
+ports = SubResource("Resource_v3wtd")
+capacity = SubResource("Resource_w7nrb")
+
+[sub_resource type="Resource" id="Resource_2svkg"]
+script = ExtResource("2_wcmjd")
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_a810g"]
+script = ExtResource("3_xnly7")
+
+[sub_resource type="Resource" id="Resource_ceal1"]
+script = ExtResource("1_srrqw")
+id = "crane"
+display_name = "Mobile Crane"
+cost = 45000.0
+model_id = "veh_constructor"
+upkeep = 0.2
+category = "FLEET"
+order = 24
+icon_path = "res://assets/icons/crane.png"
+description = "builds structures on a site"
+minimap_color = Color(0.8, 0.85, 0.55, 1)
+unit_job = "build"
+role = "unit"
+ports = SubResource("Resource_a810g")
+capacity = SubResource("Resource_2svkg")
+
+[resource]
+script = ExtResource("4_nsr7y")
+entries = Array[ExtResource("1_srrqw")]([SubResource("Resource_27bmu"), SubResource("Resource_skd88"), SubResource("Resource_u41jt"), SubResource("Resource_80g0r"), SubResource("Resource_enutl"), SubResource("Resource_c60q8"), SubResource("Resource_nh14k"), SubResource("Resource_gb1i3"), SubResource("Resource_owh2p"), SubResource("Resource_3sw2p"), SubResource("Resource_y8s3l"), SubResource("Resource_pf2dv"), SubResource("Resource_n3wga"), SubResource("Resource_m3oj7"), SubResource("Resource_nq3bv"), SubResource("Resource_8wd87"), SubResource("Resource_g8qbm"), SubResource("Resource_i6c1w"), SubResource("Resource_pjuou"), SubResource("Resource_lgkl4"), SubResource("Resource_urj1v"), SubResource("Resource_fuw7m"), SubResource("Resource_e8t40"), SubResource("Resource_em4km"), SubResource("Resource_3cok4"), SubResource("Resource_grir8"), SubResource("Resource_dhtwd"), SubResource("Resource_idq7h"), SubResource("Resource_0ap0s"), SubResource("Resource_qph6p"), SubResource("Resource_eu7qy"), SubResource("Resource_ceal1")])

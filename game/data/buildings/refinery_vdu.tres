@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="BuildingDefinition" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/capacity_spec.gd" id="1_s3s3c"]
+[ext_resource type="Script" path="res://scripts/data/port_spec.gd" id="2_drt2a"]
+[ext_resource type="Script" path="res://scripts/data/building_definition.gd" id="3_0flfr"]
+
+[sub_resource type="Resource" id="Resource_cjf38"]
+script = ExtResource("1_s3s3c")
+feed = 4.5
+yield_ratio = 0.93
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_w0q32"]
+script = ExtResource("2_drt2a")
+in_sides = 7
+links = 1
+
+[resource]
+script = ExtResource("3_0flfr")
+id = "refinery_vdu"
+display_name = "Vacuum Distillation"
+cost = 220000.0
+footprint = 2
+model_id = "ref_vdu"
+upkeep = 5.0
+category = "REFINING"
+order = 16
+icon_path = "res://assets/icons/refinery_vdu.png"
+description = "vacuum unit (4.5 bbl/s feed)"
+minimap_color = Color(0.45, 0.78, 0.9, 1)
+logistics = 2.0
+role = "consumer"
+ports = SubResource("Resource_w0q32")
+capacity = SubResource("Resource_cjf38")

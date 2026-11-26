@@ -1,0 +1,83 @@
+id,name,category,tier,role,cost_usd,build_days,upkeep_usd_day,crew,power_kw,footprint_m2,capacity_bopd,capacity_bfpd,capacity_mmscfd,capacity_bbl,drill_depth_m,water_depth_max_m,triangles,size_x,size_y,size_z
+on_land_rig,Land Drilling Rig (1500 HP),onshore,1,drilling,18000000,45,24000,52,2500,2000,,,,,4500,,18164,46.035,44.0,52.61
+on_workover_rig,Workover / Service Rig,onshore,2,drilling,2400000,8,3200,12,320,350,,,,,2500,,6912,22.0,16.0,25.65
+on_pumpjack,Beam Pumping Unit,onshore,1,production,250000,3,320,1,45,120,250,,,,,,3372,16.8,6.0,8.15
+on_wellhead,Wellhead / Christmas Tree,onshore,1,production,120000,2,90,1,0,30,,,,,,,2184,5.875,5.0,3.791
+on_separator,3-Phase Separator Package,onshore,1,processing,900000,5,1100,3,60,180,,8000,,,,,1480,6.0,3.943,2.9
+on_heater_treater,Heater Treater,onshore,1,processing,450000,4,650,2,40,90,,2500,,,,,1560,9.0,4.0,6.025
+on_tank_farm,"Crude Tank Farm (4 x 10,000 bbl)",onshore,1,storage,1600000,12,1400,4,120,1500,,,,40000,,,10336,46.0,37.8,12.539
+on_flare,Flare Stack 34 m,onshore,1,support,800000,8,400,2,0,120,,,12,,,,1168,12.0,10.0,35.16
+on_compressor_station,Gas Compressor Station,onshore,2,processing,2200000,14,3600,6,1400,480,,,10,,,,2636,26.3,18.0,12.25
+on_metering_skid,Custody Metering Skid,onshore,2,support,600000,4,450,2,25,36,,,,,,,1572,9.85,3.4,1.8
+on_gathering_manifold,Wellpad Gathering Manifold,onshore,1,transport,350000,3,180,2,0,140,,,,,,,3768,16.0,8.0,1.5
+on_saltwater_disposal,Saltwater Disposal Facility,onshore,2,support,700000,6,700,3,180,260,,,,,,,4382,18.982,14.0,8.835
+on_pipeline_segment,Pipeline Segment (10 m),onshore,1,transport,40000,1,15,1,0,28,25000,,,,,,564,11.0,2.6,1.423
+on_pipeline_valve,Pipeline Valve Station,onshore,2,transport,180000,2,60,1,5,40,,,,,,,776,4.5,3.05,1.725
+off_jackup_rig,Jack-Up Drilling Rig,offshore,2,drilling,210000000,120,180000,120,12000,3500,,,,,7600,120,25184,62.0,70.27,113.225
+off_semi_submersible,Semi-Submersible Rig,offshore,3,drilling,520000000,240,320000,180,26000,5000,,,,,9000,2400,17028,71.78,80.926,79.225
+off_drillship,Ultra-Deepwater Drillship,offshore,4,drilling,780000000,300,410000,220,42000,9000,,,,,12000,3600,16412,232.56,83.166,75.025
+off_fixed_platform,Fixed Steel Platform,offshore,2,production,340000000,300,95000,60,6000,900,45000,,,,,110,6144,67.8,46.0,88.875
+off_fpso,FPSO (Floating Production Storage Offloading),offshore,3,production,1100000000,420,260000,110,28000,11000,120000,,,,,,7560,248.0,86.846,91.174
+off_spar,Truss Spar Platform,offshore,3,production,820000000,380,140000,45,9000,1200,70000,,,,,,4232,84.232,84.232,115.149
+off_subsea_tree,Subsea Christmas Tree,offshore,2,production,32000000,25,6000,0,8,25,,,,,,3000,638,6.045,5.677,4.35
+off_subsea_manifold,Subsea Production Manifold,offshore,2,transport,48000000,30,4500,0,0,80,,,,,,,1324,11.7,6.341,2.6
+off_riser_joint,Hybrid Riser Joint (24 m),offshore,2,transport,2400000,2,600,0,0,8,30000,,,,,,658,2.918,2.274,24.0
+off_supply_vessel,Platform Supply Vessel,offshore,1,marine,28000000,60,9500,14,5000,1400,,,,,,,1976,78.0,18.0,24.67
+off_ahts,Anchor Handling Tug,offshore,2,marine,42000000,70,12000,16,18000,1100,,,,,,,628,69.439,16.0,19.48
+off_shuttle_tanker,Shuttle Tanker (1.0 MMbbl),offshore,2,marine,95000000,120,28000,24,14000,10000,,,,,,,9388,245.0,42.0,38.16
+off_crew_boat,Fast Crew Boat,offshore,1,marine,6500000,20,2600,6,4000,350,,,,,,,576,38.0,14.07,13.787
+off_helicopter,Medium Transport Helicopter,offshore,2,air,18000000,0,7200,2,2600,200,,,,,,,1212,13.55,7.352,4.245
+off_pipelay_barge,S-Lay Pipelay Barge,offshore,3,marine,260000000,180,210000,240,20000,4800,,,,,,,3600,151.516,53.648,47.018
+mid_pump_station,Pipeline Pump Station,midstream,2,transport,4800000,18,4900,8,3200,750,180000,,,,,,3585,38.0,22.035,12.25
+mid_slug_catcher,Slug Catcher,midstream,2,processing,6200000,22,3100,4,120,560,,,250,,,,2972,40.0,14.0,12.25
+mid_gas_plant,Gas Processing Plant,midstream,3,processing,420000000,420,180000,140,34000,5600,,,400,,,,41216,92.712,63.725,42.56
+mid_lng_train,LNG Liquefaction Train (4 Mtpa),midstream,4,processing,2400000000,1100,640000,220,180000,3700,,,,,,,28944,74.712,50.25,35.46
+mid_lng_sphere,LNG Storage Sphere,midstream,3,storage,180000000,180,24000,6,600,1150,,,,,,,2336,34.0,35.0,28.52
+mid_tank_terminal,Crude Terminal & Truck Loading,midstream,3,storage,96000000,260,48000,60,4500,8400,,,,1200000,,,17224,115.1,80.5,31.48
+mid_loading_jetty,Marine Loading Jetty,midstream,3,transport,240000000,300,62000,30,1200,3600,,,,,,,2652,44.727,143.64,28.453
+mid_pig_launcher,Pig Launcher / Receiver,midstream,1,support,380000,3,120,2,0,40,,,,,,,1534,12.0,4.0,2.74
+ref_cdu,Crude Distillation Unit,refinery,2,refining,380000000,380,150000,90,18000,2900,,,,,,,18362,66.0,49.4,50.61
+ref_vdu,Vacuum Distillation Unit,refinery,2,refining,190000000,260,78000,45,9000,1900,,,,,,,13596,54.25,37.675,40.28
+ref_fcc,Fluid Catalytic Cracking Unit,refinery,3,refining,720000000,520,260000,120,42000,3500,,,,,,,13608,70.0,50.0,43.46
+ref_reformer,Catalytic Reformer,refinery,3,refining,310000000,340,110000,60,14000,1700,,,,,,,17852,48.0,39.675,34.9
+ref_hydrotreater,Hydrotreater,refinery,2,refining,260000000,300,92000,50,11000,1400,,,,,,,13396,46.725,35.412,31.9
+ref_coker,Delayed Coking Unit,refinery,3,refining,540000000,430,180000,80,16000,2100,,,,,,,10950,56.25,42.0,37.9
+ref_amine,Amine Sweetening Unit,refinery,2,refining,120000000,200,48000,30,5000,1200,,,120,,,,14560,42.225,35.042,25.51
+ref_sru,Claus Sulfur Recovery Unit,refinery,3,refining,160000000,240,52000,28,2800,1500,,,,,,,3266,44.0,34.15,30.8
+ref_cooling_tower,Induced Draft Cooling Tower,refinery,2,support,34000000,150,16000,12,4200,780,,,,,,,2080,32.036,28.0,12.95
+ref_flare,Refinery Flare (62 m),refinery,1,support,22000000,120,8500,8,0,480,,,180,,,,2016,22.07,22.035,63.56
+ref_pipe_rack,Pipe Rack Module (20 m),refinery,1,transport,650000,4,180,3,0,190,,,,,,,648,21.0,9.0,6.65
+ref_control_room,Control Room & Substation,refinery,2,support,48000000,160,22000,40,1200,660,,,,,,,1012,30.07,22.035,10.3
+veh_pickup,Crew Pickup (4x4),vehicles,1,vehicle,48000,,45,5,,,,,,,,,3140,2.33,5.81,2.048
+veh_crew_bus,Crew Bus,vehicles,1,vehicle,180000,,190,45,,,,,,,,,3828,3.3,11.03,2.987
+veh_fuel_tanker,Fuel Tanker,vehicles,1,vehicle,260000,,240,2,,,,,,220,,,5956,3.35,10.415,3.617
+veh_vacuum_truck,Vacuum / Water Truck,vehicles,1,vehicle,320000,,280,2,,,,,,180,,,5776,3.3,11.495,4.147
+veh_crane_truck,Mobile Crane Truck,vehicles,2,vehicle,980000,,900,3,,,,,,,,,6056,5.5,12.65,3.796
+veh_pipe_truck,Pipe Haul Truck,vehicles,1,vehicle,290000,,260,2,,,,,,,,,5664,3.3,11.645,7.518
+veh_cementing_truck,Cementing Unit,vehicles,2,vehicle,1100000,,1050,4,,,,,,,,,5999,6.0,9.945,3.302
+veh_wireline_truck,Wireline Unit,vehicles,2,vehicle,860000,,820,4,,,,,,,,,5688,3.34,11.045,6.637
+veh_frac_pump_trailer,Frac Pump Trailer,vehicles,2,vehicle,1400000,,1300,2,2500,,,,,,,,4540,3.211,7.95,2.857
+veh_excavator,Excavator,vehicles,1,vehicle,420000,,380,1,,,,,,,,,2132,3.01,9.06,4.673
+veh_wheel_loader,Wheel Loader,vehicles,1,vehicle,350000,,320,1,,,,,,,,,2944,2.934,7.8,3.406
+veh_bulldozer,Bulldozer,vehicles,1,vehicle,480000,,430,1,,,,,,,,,2200,3.55,7.475,4.46
+veh_fire_truck,Fire / Safety Truck,vehicles,2,vehicle,520000,,450,5,,,,,,,,,5628,3.3,9.975,3.686
+veh_forklift,Forklift,vehicles,1,vehicle,65000,,60,1,,,,,,,,,2284,1.79,4.25,2.598
+veh_crew_car,Field Car,vehicles,1,vehicle,32000,,30,4,,,,,,,,,2880,2.2,4.98,1.768
+prp_fence_module,Fence Module (4 m),props,1,prop,1200,,,,,,,,,,,,124,4.45,0.45,2.272
+prp_floodlight,Floodlight Tower,props,1,prop,18000,,,,4,,,,,,,,316,2.6,1.6,14.25
+prp_portacabin,Site Office Cabin,props,1,prop,26000,,,8,,16,,,,,,,428,6.2,2.6,3.5
+prp_sign,Site Sign,props,1,prop,2500,,,,,,,,,,,,200,3.2,0.8,3.25
+prp_barrels,Barrel Cluster,props,1,prop,900,,,,,,,,,6,,,780,2.197,2.183,0.88
+prp_gas_cylinders,Gas Cylinder Rack,props,1,prop,3200,,,,,,,,,,,,786,2.6,1.4,2.05
+prp_road_straight,Road Tile (12 m),props,1,infrastructure,9000,,,,,,,,,,,,108,12.0,9.1,0.24
+prp_road_corner,Road Corner,props,1,infrastructure,11000,,,,,,,,,,,,120,14.45,17.95,0.24
+prp_build_plot,Build Plot (24 m),props,1,gameplay,45000,,,,,576,,,,,,,546,24.0,24.0,2.58
+prp_well_marker,Well Marker,props,1,gameplay,400,,,,,,,,,,,,64,1.45,0.9,2.4
+prp_drill_bit,Tricone Drill Bit,props,1,prop,12000,,,,,,,,,,,,368,1.353,1.452,2.295
+prp_pipe_supply,Pipe Supply Stack,props,1,prop,28000,,,,,,,,,,,,432,9.0,4.0,7.518
+prp_water_tank,Water Storage Tank,props,1,prop,15000,,,,,,,,,200,,,796,4.4,3.6,3.855
+prp_workshop,Field Workshop,props,2,support,1800000,90,,30,,180,,,,,,,572,18.0,12.0,7.7
+prp_security_gate,Site Security Gate,props,1,prop,65000,,,,,,,,,,,,464,12.0,9.0,3.25
+prp_team_flag,Team Ownership Flag,props,1,gameplay,5000,,,,,,,,,,,,472,4.05,2.9,7.31
+prp_plot_marker,Build Plot Marker,props,1,gameplay,0,,,,,,,,,,,,332,16.0,16.0,1.22
+prp_office_stack,Stacked Site Offices,props,1,support,96000,,,24,,40,,,,,,,1324,6.238,12.24,5.28

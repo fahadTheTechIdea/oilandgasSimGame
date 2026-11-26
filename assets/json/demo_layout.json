@@ -1,0 +1,1072 @@
+{
+ "units": "meters",
+ "source": "blender/demo_scene.py",
+ "terrain": {
+  "land": {
+   "center": [
+    -400,
+    0
+   ],
+   "size": [
+    1700,
+    3000
+   ],
+   "plane": "grass",
+   "z": -0.8
+  },
+  "shore": {
+   "center": [
+    405,
+    0
+   ],
+   "size": [
+    90,
+    3000
+   ],
+   "plane": "sand",
+   "z": -0.6
+  },
+  "sea": {
+   "center": [
+    1500,
+    0
+   ],
+   "size": [
+    2100,
+    3000
+   ],
+   "plane": "water",
+   "z": 0.0
+  }
+ },
+ "camera": {
+  "position": [
+   300,
+   -1200,
+   620
+  ],
+  "target": [
+   140,
+   0,
+   0
+  ],
+  "lens_mm": 28
+ },
+ "objects": [
+  {
+   "id": "on_land_rig",
+   "x": -560,
+   "y": 60,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "on_workover_rig",
+   "x": -470,
+   "y": -170,
+   "z": 0.0,
+   "rot": 15
+  },
+  {
+   "id": "on_pumpjack",
+   "x": -470,
+   "y": -110,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "on_pumpjack",
+   "x": -470,
+   "y": -50,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "on_pumpjack",
+   "x": -470,
+   "y": 10,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "on_pumpjack",
+   "x": -400,
+   "y": -110,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "on_pumpjack",
+   "x": -400,
+   "y": -50,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "on_pumpjack",
+   "x": -400,
+   "y": 10,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "on_gathering_manifold",
+   "x": -350,
+   "y": -40,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "on_separator",
+   "x": -350,
+   "y": 40,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "on_heater_treater",
+   "x": -350,
+   "y": 90,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "on_tank_farm",
+   "x": -270,
+   "y": 150,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "on_compressor_station",
+   "x": -270,
+   "y": 20,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "on_flare",
+   "x": -230,
+   "y": 200,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "prp_workshop",
+   "x": -600,
+   "y": -120,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "prp_office_stack",
+   "x": -600,
+   "y": -190,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "on_pipeline_valve",
+   "x": -310,
+   "y": 60,
+   "z": 0.0,
+   "rot": 90
+  },
+  {
+   "id": "mid_pump_station",
+   "x": -160,
+   "y": 60,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "mid_pig_launcher",
+   "x": -105,
+   "y": 60,
+   "z": 0.0,
+   "rot": 90
+  },
+  {
+   "id": "mid_gas_plant",
+   "x": 20,
+   "y": -60,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "mid_lng_train",
+   "x": 150,
+   "y": 150,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "mid_lng_sphere",
+   "x": 90,
+   "y": 250,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "mid_tank_terminal",
+   "x": -40,
+   "y": 240,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "ref_cdu",
+   "x": -60,
+   "y": -250,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "ref_vdu",
+   "x": 30,
+   "y": -270,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "ref_fcc",
+   "x": 130,
+   "y": -290,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "ref_reformer",
+   "x": -70,
+   "y": -360,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "ref_hydrotreater",
+   "x": 10,
+   "y": -360,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "ref_coker",
+   "x": 100,
+   "y": -380,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "ref_amine",
+   "x": 190,
+   "y": -340,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "ref_sru",
+   "x": 190,
+   "y": -255,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "ref_cooling_tower",
+   "x": 270,
+   "y": -330,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "ref_flare",
+   "x": -160,
+   "y": -330,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "ref_control_room",
+   "x": -160,
+   "y": -250,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "ref_pipe_rack",
+   "x": -105,
+   "y": -310,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "ref_pipe_rack",
+   "x": -85,
+   "y": -310,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "ref_pipe_rack",
+   "x": -65,
+   "y": -310,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "ref_pipe_rack",
+   "x": -45,
+   "y": -310,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "mid_loading_jetty",
+   "x": 470,
+   "y": 240,
+   "z": 0.0,
+   "rot": 90
+  },
+  {
+   "id": "off_fixed_platform",
+   "x": 640,
+   "y": 120,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "off_jackup_rig",
+   "x": 640,
+   "y": -80,
+   "z": 0.0,
+   "rot": 20
+  },
+  {
+   "id": "off_fpso",
+   "x": 700,
+   "y": 340,
+   "z": 0.0,
+   "rot": -8
+  },
+  {
+   "id": "off_supply_vessel",
+   "x": 540,
+   "y": 300,
+   "z": 0.0,
+   "rot": 10
+  },
+  {
+   "id": "off_ahts",
+   "x": 540,
+   "y": 150,
+   "z": 0.0,
+   "rot": -20
+  },
+  {
+   "id": "off_shuttle_tanker",
+   "x": 760,
+   "y": -230,
+   "z": 0.0,
+   "rot": 5
+  },
+  {
+   "id": "off_spar",
+   "x": 780,
+   "y": 180,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "off_helicopter",
+   "x": 600,
+   "y": 210,
+   "z": 70,
+   "rot": 0
+  },
+  {
+   "id": "off_pipelay_barge",
+   "x": 540,
+   "y": -210,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "veh_pickup",
+   "x": -520,
+   "y": 10,
+   "z": 0.0,
+   "rot": 20
+  },
+  {
+   "id": "veh_pickup",
+   "x": -480,
+   "y": 120,
+   "z": 0.0,
+   "rot": -35
+  },
+  {
+   "id": "veh_crew_bus",
+   "x": -560,
+   "y": -40,
+   "z": 0.0,
+   "rot": 5
+  },
+  {
+   "id": "veh_fuel_tanker",
+   "x": -300,
+   "y": 100,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "veh_crane_truck",
+   "x": -120,
+   "y": -200,
+   "z": 0.0,
+   "rot": 90
+  },
+  {
+   "id": "veh_pipe_truck",
+   "x": -120,
+   "y": 30,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "veh_excavator",
+   "x": -610,
+   "y": -250,
+   "z": 0.0,
+   "rot": 30
+  },
+  {
+   "id": "veh_bulldozer",
+   "x": -660,
+   "y": -180,
+   "z": 0.0,
+   "rot": -10
+  },
+  {
+   "id": "veh_fire_truck",
+   "x": -540,
+   "y": 140,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "veh_forklift",
+   "x": -300,
+   "y": -120,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "veh_crew_car",
+   "x": 170,
+   "y": 60,
+   "z": 0.0,
+   "rot": 180
+  },
+  {
+   "id": "prp_team_flag",
+   "x": -520,
+   "y": 170,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "prp_team_flag",
+   "x": -180,
+   "y": -320,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "prp_floodlight",
+   "x": -620,
+   "y": 40,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "prp_floodlight",
+   "x": -230,
+   "y": -220,
+   "z": 0.0,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -620.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -608.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -596.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -584.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -572.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -560.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -548.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -536.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -524.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -512.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -500.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -488.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -476.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -464.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -452.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -440.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -428.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -416.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -404.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -392.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -380.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -368.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -356.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -344.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -332.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -320.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -308.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -296.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -284.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -272.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -260.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -248.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -236.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -224.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -212.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -200.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -188.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -176.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -164.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -152.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -140.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -128.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -116.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -104.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -92.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -80.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -68.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -56.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -44.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -32.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -20.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -8.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": 4.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": 16.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": 28.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": 40.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": 52.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": 64.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": 76.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": 88.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": 100.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": 112.0,
+   "y": -20,
+   "z": 0.02,
+   "rot": 0
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -330,
+   "y": -20.0,
+   "z": 0.04,
+   "rot": 90
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -330,
+   "y": -8.0,
+   "z": 0.04,
+   "rot": 90
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -330,
+   "y": 4.0,
+   "z": 0.04,
+   "rot": 90
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -330,
+   "y": 16.0,
+   "z": 0.04,
+   "rot": 90
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -330,
+   "y": 28.0,
+   "z": 0.04,
+   "rot": 90
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -330,
+   "y": 40.0,
+   "z": 0.04,
+   "rot": 90
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -330,
+   "y": 52.0,
+   "z": 0.04,
+   "rot": 90
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -330,
+   "y": 64.0,
+   "z": 0.04,
+   "rot": 90
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -330,
+   "y": 76.0,
+   "z": 0.04,
+   "rot": 90
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -330,
+   "y": 88.0,
+   "z": 0.04,
+   "rot": 90
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -330,
+   "y": 100.0,
+   "z": 0.04,
+   "rot": 90
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -330,
+   "y": 112.0,
+   "z": 0.04,
+   "rot": 90
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -330,
+   "y": 124.0,
+   "z": 0.04,
+   "rot": 90
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -330,
+   "y": 136.0,
+   "z": 0.04,
+   "rot": 90
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -330,
+   "y": 148.0,
+   "z": 0.04,
+   "rot": 90
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -330,
+   "y": 160.0,
+   "z": 0.04,
+   "rot": 90
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -330,
+   "y": 172.0,
+   "z": 0.04,
+   "rot": 90
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -330,
+   "y": 184.0,
+   "z": 0.04,
+   "rot": 90
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -330,
+   "y": 196.0,
+   "z": 0.04,
+   "rot": 90
+  },
+  {
+   "id": "prp_road_straight",
+   "x": -330,
+   "y": 208.0,
+   "z": 0.04,
+   "rot": 90
+  }
+ ]
+}

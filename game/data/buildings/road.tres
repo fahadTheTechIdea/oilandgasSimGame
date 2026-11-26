@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="BuildingDefinition" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/capacity_spec.gd" id="1_q02ii"]
+[ext_resource type="Script" path="res://scripts/data/port_spec.gd" id="2_rcn2n"]
+[ext_resource type="Script" path="res://scripts/data/building_definition.gd" id="3_synw3"]
+
+[sub_resource type="Resource" id="Resource_gdjvg"]
+script = ExtResource("1_q02ii")
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+gates = true
+road_base = 2.0
+road_per_cell = 0.5
+
+[sub_resource type="Resource" id="Resource_pxjjw"]
+script = ExtResource("2_rcn2n")
+
+[resource]
+script = ExtResource("3_synw3")
+id = "road"
+display_name = "Road"
+cost = 200.0
+upkeep = 0.01
+hotkey = "6"
+category = "INFRASTRUCTURE"
+order = 6
+icon_path = "res://assets/icons/road.png"
+description = "drag to lay · $200 per cell"
+minimap_color = Color(0.4, 0.42, 0.38, 1)
+role = "access"
+ports = SubResource("Resource_pxjjw")
+capacity = SubResource("Resource_gdjvg")

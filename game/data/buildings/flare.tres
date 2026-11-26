@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="BuildingDefinition" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/capacity_spec.gd" id="1_baln6"]
+[ext_resource type="Script" path="res://scripts/data/port_spec.gd" id="2_fu26x"]
+[ext_resource type="Script" path="res://scripts/data/building_definition.gd" id="3_g4awv"]
+
+[sub_resource type="Resource" id="Resource_lhpgk"]
+script = ExtResource("1_baln6")
+yield_bonus = 0.05
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_2x3fn"]
+script = ExtResource("2_fu26x")
+in_sides = 15
+out_sides = 15
+links = 2
+
+[resource]
+script = ExtResource("3_g4awv")
+id = "flare"
+display_name = "Flare"
+cost = 20000.0
+model_id = "on_flare"
+upkeep = 0.8
+category = "PROCESSING"
+order = 14
+icon_path = "res://assets/icons/flare.png"
+description = "safe operations (+5% yield)"
+minimap_color = Color(0.95, 0.55, 0.35, 1)
+logistics = 0.5
+role = "processor"
+ports = SubResource("Resource_2x3fn")
+capacity = SubResource("Resource_lhpgk")

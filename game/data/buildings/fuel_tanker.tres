@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="BuildingDefinition" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/capacity_spec.gd" id="1_6qgfm"]
+[ext_resource type="Script" path="res://scripts/data/port_spec.gd" id="2_7l4vn"]
+[ext_resource type="Script" path="res://scripts/data/building_definition.gd" id="3_lwdr6"]
+
+[sub_resource type="Resource" id="Resource_5a2tv"]
+script = ExtResource("1_6qgfm")
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_xmfwf"]
+script = ExtResource("2_7l4vn")
+
+[resource]
+script = ExtResource("3_lwdr6")
+id = "fuel_tanker"
+display_name = "Fuel Tanker"
+cost = 26000.0
+model_id = "veh_fuel_tanker"
+upkeep = 0.15
+category = "FLEET"
+order = 22
+icon_path = "res://assets/icons/fuel_tanker.png"
+description = "hauls crude from a well to the base"
+minimap_color = Color(0.95, 0.6, 0.3, 1)
+unit_job = "hauler"
+role = "unit"
+ports = SubResource("Resource_xmfwf")
+capacity = SubResource("Resource_5a2tv")

@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="BuildingDefinition" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/capacity_spec.gd" id="1_xh18m"]
+[ext_resource type="Script" path="res://scripts/data/port_spec.gd" id="2_dcwqo"]
+[ext_resource type="Script" path="res://scripts/data/building_definition.gd" id="3_a202v"]
+
+[sub_resource type="Resource" id="Resource_fm3cm"]
+script = ExtResource("1_xh18m")
+boost = 2.0
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_q2frw"]
+script = ExtResource("2_dcwqo")
+in_sides = 15
+out_sides = 15
+links = 2
+
+[resource]
+script = ExtResource("3_a202v")
+id = "manifold"
+display_name = "Gathering Manifold"
+cost = 18000.0
+model_id = "on_gathering_manifold"
+upkeep = 1.0
+hotkey = "="
+category = "PROCESSING"
+order = 12
+icon_path = "res://assets/icons/manifold.png"
+description = "small throughput boost / junction"
+minimap_color = Color(0.95, 0.85, 0.35, 1)
+logistics = 0.5
+role = "booster"
+ports = SubResource("Resource_q2frw")
+capacity = SubResource("Resource_fm3cm")

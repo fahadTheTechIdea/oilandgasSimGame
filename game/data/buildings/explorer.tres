@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="BuildingDefinition" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/capacity_spec.gd" id="1_lalrj"]
+[ext_resource type="Script" path="res://scripts/data/port_spec.gd" id="2_incng"]
+[ext_resource type="Script" path="res://scripts/data/building_definition.gd" id="3_284ay"]
+
+[sub_resource type="Resource" id="Resource_j1ma2"]
+script = ExtResource("1_lalrj")
+radius = 11.0
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_6vuyk"]
+script = ExtResource("2_incng")
+
+[resource]
+script = ExtResource("3_284ay")
+id = "explorer"
+display_name = "Exploration Office"
+cost = 30000.0
+model_id = "gam_explorer"
+upkeep = 2.0
+hotkey = "4"
+category = "UPSTREAM"
+order = 4
+icon_index = 3
+icon_path = "res://assets/icons/explorer.png"
+description = "needs road access to survey"
+minimap_color = Color(0.62, 0.9, 0.52, 1)
+logistics = 1.0
+role = "survey"
+ports = SubResource("Resource_6vuyk")
+capacity = SubResource("Resource_j1ma2")

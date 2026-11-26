@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="BuildingDefinition" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/capacity_spec.gd" id="1_4od5q"]
+[ext_resource type="Script" path="res://scripts/data/port_spec.gd" id="2_6w1jv"]
+[ext_resource type="Script" path="res://scripts/data/building_definition.gd" id="3_bh6cb"]
+
+[sub_resource type="Resource" id="Resource_j5ner"]
+script = ExtResource("1_4od5q")
+feed = 5.0
+yield_ratio = 0.9
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_2potr"]
+script = ExtResource("2_6w1jv")
+in_sides = 7
+links = 1
+
+[resource]
+script = ExtResource("3_bh6cb")
+id = "refinery_cdu"
+display_name = "Crude Distillation Unit"
+cost = 180000.0
+footprint = 2
+model_id = "ref_cdu"
+upkeep = 6.0
+category = "REFINING"
+order = 15
+icon_path = "res://assets/icons/refinery_cdu.png"
+description = "larger refinery feed (5 bbl/s)"
+minimap_color = Color(0.45, 0.78, 0.9, 1)
+logistics = 2.0
+role = "consumer"
+ports = SubResource("Resource_2potr")
+capacity = SubResource("Resource_j5ner")

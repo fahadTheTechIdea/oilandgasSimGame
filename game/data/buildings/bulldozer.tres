@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="BuildingDefinition" format=3]
+
+[ext_resource type="Script" path="res://scripts/data/capacity_spec.gd" id="1_d82d7"]
+[ext_resource type="Script" path="res://scripts/data/port_spec.gd" id="2_fqvno"]
+[ext_resource type="Script" path="res://scripts/data/building_definition.gd" id="3_pbxln"]
+
+[sub_resource type="Resource" id="Resource_0x4nt"]
+script = ExtResource("1_d82d7")
+pipe_grade_caps = PackedFloat32Array(4, 8, 16)
+pipe_grade_costs = PackedFloat32Array(400, 900, 1800)
+pipe_grade_upkeep = PackedFloat32Array(0.02, 0.05, 0.1)
+
+[sub_resource type="Resource" id="Resource_xveut"]
+script = ExtResource("2_fqvno")
+
+[resource]
+script = ExtResource("3_pbxln")
+id = "bulldozer"
+display_name = "Site Bulldozer"
+cost = 22000.0
+model_id = "veh_bulldozer"
+upkeep = 0.12
+category = "FLEET"
+order = 26
+icon_path = "res://assets/icons/bulldozer.png"
+description = "levels and prepares a 2×2 site"
+minimap_color = Color(0.95, 0.75, 0.35, 1)
+unit_job = "prep"
+role = "unit"
+ports = SubResource("Resource_xveut")
+capacity = SubResource("Resource_0x4nt")
